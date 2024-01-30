@@ -39,12 +39,11 @@
                 }
             }
 
-            @media (max-width: 414px) {
+            @media (max-width: 430px) {
                 .col-md-4 {
                     width: 100%;
                 }
             }
-            
         </style>
     </head>
     <body data-bs-spy="scroll">
@@ -479,11 +478,18 @@
         <script>
             const ativadorToast = document.getElementById('btn-mensagens')
             const mensagem = document.getElementById('mensagem')
+            const menu = document.getElementById('menu')
 
             if (ativadorToast) {
                 ativadorToast.addEventListener('click', function () {
                     const toast = new bootstrap.Toast(mensagem)
                     toast.show()
+                })
+            }
+
+            if (menu) {
+                menu.addEventListener('click', function () {
+                    menu.classList.remove('show')
                 })
             }
         </script>
